@@ -93,7 +93,7 @@ int main(int argc,char **argv){
             continue;
         }
 
-        data = data + 26;
+        data = data + 22;
 
 //        int pro_res = print_ip_header(data);
 //        printf("%d", pro_res);
@@ -101,7 +101,7 @@ int main(int argc,char **argv){
 //            continue;
 //        }
         print_ip_header(data);
-        data = data + 8;
+        data = data + 12;
         print_tcp_header(data);
         data= data + 20;
         print_http_header(data);
@@ -175,6 +175,3 @@ void print_http_header(const unsigned char *data)
         printf("%c", data[i]);
     }
 }
-
-
-
